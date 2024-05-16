@@ -7,17 +7,11 @@ const express = require("express");
 const app = express()
 const PORT=5000
 const db=require('./db')
+//importing controllers router
+const routes= require('./controllers/controller.user')
 // use(route, function)
-
+app.use('/api',routes)
 app.use(express.json())
-
-app.get("/", (request, response) => {
-    response.send("HI")
-})
-
-app.get("/myapp", (request,response) => {
-     return response.send("Hello world")
-})
 
 // listen(port, function)
 // funtion return server start or fail
