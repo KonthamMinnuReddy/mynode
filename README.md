@@ -1,1 +1,0 @@
-my mode app# mynodeapp
