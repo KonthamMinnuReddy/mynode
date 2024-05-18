@@ -5,7 +5,21 @@
 const express = require("express");
 
 const app = express()
+
+
 const PORT=5000
+
+//import body-parse
+
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
+app.use(
+    bodyParser.urlencoded({
+       
+        extended: true,
+    })
+)
 const db=require('./db')
 //importing controllers router
 const routes= require('./controllers/controller.user')
